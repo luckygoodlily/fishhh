@@ -1,0 +1,44 @@
+@charset "utf-8";
+#main {
+	margin: 0 auto;
+	font-weight: bold;
+	color: #0D0D0D;
+
+}
+
+header {
+	font-weight:bold;
+	font-size:xx-large;
+	color:#FFFFFF;
+;
+  text-align: center;
+  line-height:100px;
+background-color: #5599FF;
+	height: 100px;		
+}
+
+.center {
+	display:block; 
+	margin:auto;
+	vertical-align: middle;
+}
+
+.dropdown-menu > div {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.dropdown-menu > span:focus ~ div {
+  display: block;
+}
+.white{
+	
+}
+.black{
+	font-color:#000000;
+}
