@@ -21,7 +21,7 @@
 	  </div><br><br><br>
 	  <?php
 		include("mysql_connect.inc.php");  // include過的變數都能直接引用
-111
+
 
         if($_GET['flag']==1){
           $em=$_REQUEST['email'];//電子郵件地址
