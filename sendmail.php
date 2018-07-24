@@ -21,12 +21,12 @@
 	  </div><br><br><br>
 	  <?php
 		include("mysql_connect.inc.php");  // include過的變數都能直接引用
-
+111
 
         if($_GET['flag']==1){
           $em=$_REQUEST['email'];//電子郵件地址
           $sql="select * from login where Client_User_Email	='$em' ";
-          $renum=mysqli_num_rows(mysqli_query($db,$sql)); //記錄個數
+          $renum=mysqli_num_rows(mysqli_query($db,$sql)); //記錄個數
           $re=mysqli_fetch_row(mysqli_query($db,$sql));
 		  //echo $re[5] ;
           if($re==0){
@@ -40,7 +40,7 @@
             //mail(收件地址，主旨，信件內容)
             echo "信件已寄出";
             // echo "<script>location.replace('index.php')</script>";
-            //本例無法使用以下方式轉址，因為已經輸出 Html
+            //本例無法使用以下方式轉址，因為已經輸出 Html
             //header("Location:index.php");//網頁轉址到 index.php
           } // else
         } // if
