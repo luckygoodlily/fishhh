@@ -9,6 +9,7 @@
   unset($_SESSION['fishlight']);
   unset($_SESSION['home']);
   unset($_SESSION['UserAccount']);
+  unset($_SESSION['companyid']);
   echo '登出中......';
   echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
 ?>

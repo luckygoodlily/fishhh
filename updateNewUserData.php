@@ -99,9 +99,20 @@
 			echo '請輸入正確信箱!<br><br>';
 			//echo '<meta http-equiv=REFRESH CONTENT=2;url=AddNewUserData.php>';   
 		  } // else if
-			
-		
-		  $sql = "insert into userdata (Register_Account, Register_Password,Client_User_Name_Ch, Client_User_Name_En, Client_User_Tele_Area_Code, Client_User_Tele, Client_User_Tele_Ext, Client_User_Email,User_Identity) values('$account','$password1','$userCh', '$userEn', '$areaTel','$Tel','$telExt','$email','$userIdentify' )";
+		  $ID = "U" ;
+		  $query = 'Select * from userdata where User_Code LIKE "%'.$ID.'%" Order by User_Code desc';
+		  $result = mysqli_query( $db,$query ) or die("Error sql statement");
+		  $rows = mysqli_num_rows( $result ) ;
+		  $row = mysqli_fetch_array( $result ) ;
+		  
+	      $userID = substr( $row[1], -6 );
+		  $userID = $userID + 1 ;
+		  //echo $clientID."<br>" ;
+		  $userID = substr( $row[1], 0, -6) . sprintf("%06d", $userID) ;
+		  //echo $userID;
+		  $renew = "no";
+		  $companyid = $_SESSION['companyid'];
+		  $sql = "insert into userdata (User_Code, Register_Account, Register_Password,Company_Code,Client_User_Name_Ch, Client_User_Name_En, Client_User_Tele_Area_Code, Client_User_Tele, Client_User_Tele_Ext, Client_User_Email, User_Identity, renew ) values('$userID','$account','$password1','$companyid','$userCh', '$userEn', '$areaTel','$Tel','$telExt','$email','$userIdentify','$renew' )";
 		  
           if( mysqli_query($db, $sql) ){
             echo '使用者資料新建立成功!<br><br>';
@@ -109,8 +120,10 @@
 	        echo '<table align="center" border="5" > ';
        
             echo '<tr align="left" bgcolor= #5599FF color="white" >';
+			echo '  <td><font color="white">使用者代號</font></td>';
 	        echo '  <td><font color="white">帳號</font></td>';
 	        echo '  <td><font color="white">密碼</font></td>';
+			echo '  <td><font color="white">公司代碼</font></td>';
        	    echo '  <td><font color="white">姓名(中文)</font></td>';
 	        echo '  <td><font color="white">姓名(英文)</font></td>';
 	        echo '  <td><font color="white">使用者身分</font></td>';
@@ -118,8 +131,10 @@
             echo '  <td><font color="white">信箱</font></td>';
             echo '</tr>';
 		    echo '<tr align="left">';
+			echo '  <td>'.$userID.'</td>';
 		    echo '  <td>'.$account.'</td>';
 		    echo '  <td>'.$password1.'</td>';
+			echo '  <td>'.$_SESSION['companyid'].'</td>';
 		    echo '  <td>'.$userCh.'</td>';
 		    echo '  <td>'.$userEn.'</td>';
 	        echo '  <td>'.$userIdentify.'</td>';
@@ -135,13 +150,13 @@
 		  else{
 		  
             echo '新增失敗!';
-            echo '<meta http-equiv=REFRESH CONTENT=2;url=clientSuperHome.php>';
-          } // else
+            //echo '<meta http-equiv=REFRESH CONTENT=2;url=clientSuperHome.php>';
+         } // else
         } //if
         else{
 		  
           echo '新增失敗!';
-          echo '<meta http-equiv=REFRESH CONTENT=2;url=clientSuperHome.php>';
+          //echo '<meta http-equiv=REFRESH CONTENT=2;url=clientSuperHome.php>';
         } // else
      ?>
 		

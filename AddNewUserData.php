@@ -41,7 +41,7 @@
 			   <td><input type="password" name="password1" pattern="[A-Za-z0-9]{6,10}" title="格式不正確，請輸入6~10位英文或數字" placeholder="請輸入6~10位英文或數字" /> </td></tr>
 			 <tr align="left"><td>再次輸入密碼：<font color='red'>*</font></td>
 			 <td><input type="password" name="password2" pattern="[A-Za-z0-9]{6,10}" title="格式不正確，請輸入6~10位英文或數字" placeholder="請輸入6~10位英文或數字" /> </td></tr>
-				
+		     
              <tr align="left"><td>姓名(中文)：<font color='red'>*</font></td>
 			 <td><input type="text" name="userCh" pattern="[\u4e00-\u9fa5]{2,12}" title="格式不正確，2~12位請輸入中文" placeholder="請輸入2~12位中文字" /></td></tr> 
 			 <tr align="left"><td>姓名(英文)：</td>

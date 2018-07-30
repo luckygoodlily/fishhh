@@ -12,7 +12,7 @@ $db_passwd = "lily1217";
 
 //對資料庫連線
 $db = mysqli_connect($db_server, $db_user, $db_passwd) ;
-      
+// $db = mysqli_connect($db_server, $db_user, $db_passwd,$db_name) ;    
 //資料庫連線採UTF8
 mysqli_query($db,"SET NAMES utf8");
 

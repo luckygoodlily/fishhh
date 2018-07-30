@@ -48,6 +48,7 @@
 	  if ( $row[1] == $account && $row[2] == $pw && $row[3] == $companyid) {
         echo "登入成功!\n" ;	
 	    $_SESSION['username'] = $account;
+		$_SESSION['companyid'] = $companyid;
 		$notOK = FALSE;
 		$cnt = $rows;
 		if ( $row[4] =="ABC" ) {

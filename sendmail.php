@@ -5,7 +5,7 @@
 
   </head>
   <body>
-    
+    111
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
     <div class="main" align="center">
 	  <font color="white" size="6" >
@@ -36,7 +36,7 @@
             //mail($re[5],'重設密碼','重設密碼網址：140.118.110.37\reset.php');
 			$headers = "From: donotreply@fmt.com" . "\r\n";
 			
-			mail($re[5],'重設密碼','重設密碼網址：140.118.110.37\reset.php', $headers);
+			mail($re[5],'重設密碼','重設密碼網址：http:\\lily.cs.ntust.edu.tw\reset.php', $headers);
             //mail(收件地址，主旨，信件內容)
             echo "信件已寄出";
             // echo "<script>location.replace('index.php')</script>";

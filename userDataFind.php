@@ -47,8 +47,10 @@
 		  
 		  if ( $i == 0 ){
 			echo '<tr align="left" bgcolor= #5599FF >' ;
+			echo '<td><font color="white">使用者代號</font></td>';
 		    echo '<td><font color="white">帳號</font></td>';
 			echo '<td><font color="white">密碼</font></td>';
+			echo '<td><font color="white">公司代碼</font></td>';
 			echo '<td><font color="white">姓名(中文)</font></td>';
 		    echo '<td><font color="white">姓名(英文)</font></td>';
 			echo '<td><font color="white">使用者身分</font></td>';
@@ -63,10 +65,12 @@
 		  echo '<td>'.$rs[2].'</td>';
 		  echo '<td>'.$rs[3].'</td>';
 		  echo '<td>'.$rs[4].'</td>';
-		  echo '<td>'.$rs[9].'</td>';
-		  echo '<td>'.$rs[5].$rs[6].'#'.$rs[7].'</td>';
-		  echo '<td>'.$rs[8].'</td>';
-		  echo "<td><input type=\"radio\" name=\"select\" value=\"$rs[1]\"/></td>";
+		  echo '<td>'.$rs[5].'</td>';
+		  echo '<td>'.$rs[6].'</td>';
+		  echo '<td>'.$rs[11].'</td>';
+		  echo '<td>'.$rs[7].$rs[8].'#'.$rs[9].'</td>';
+		  echo '<td>'.$rs[10].'</td>';
+		  echo "<td><input type=\"radio\" name=\"select\" value=\"$rs[2]\"/></td>";
           echo '</tr>';
 	      $haveStr = true;
 		  $i++;

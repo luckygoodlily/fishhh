@@ -8,8 +8,6 @@
   </head>
 
   <body>
-	
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <div class="main" align="center">
 	  <font color="white" size="6" >
@@ -37,7 +35,7 @@
            //這樣在下SQL語法時才可以給搜尋的值
            $UserAccount = $_POST['submitVal'];
 		   $_SESSION['UserAccount'] = $UserAccount;
-		   echo $_SESSION['UserAccount'];
+		   //echo $_SESSION['UserAccount'];
 	       //echo "111使用者代號：". "$ClientCpCode";
            //若以下$id直接用$_SESSION['username']將無法使用
              
